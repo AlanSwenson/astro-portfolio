@@ -3,9 +3,10 @@ import { Icon } from 'astro-icon'
 ---
 
 
-<div transition:persist class="flex flex-col text-pink-500 justify-center w-full bg-blue-700 rounded-b-lg pt-4 pb-6 bg-opacity-50 border-t-4 border-pink-500">
+<div class="flex flex-col text-pink-500 justify-center w-full bg-blue-700 rounded-b-lg pt-4 pb-6 bg-opacity-50 border-t-4 border-pink-500">
     <div id="extra-buttons" class="flex justify-center text-yellow-400">
-        <div id="button-select" class="w-10 md:w-20 h-4 md:h-6 extra-button border-b-2 border-yellow-400 bg-slate-900 cool-shadow"></div>
+        <a href="/contact"> <div id="button-select" class="w-10 md:w-20 h-4 md:h-6 extra-button border-b-2 border-yellow-400 bg-slate-900 cool-shadow"></div>
+            <span class="flex justify-center drop-shadow-2xl font-inter ">hire me</span></a>
         <div id="button-start" class="w-10 md:w-20 h-4 md:h-6 extra-button border-b-2 border-yellow-400 bg-slate-900 cool-shadow"></div>
     </div>
     <div id="controls-container" class="flex justify-between items-center text-yellow-400">
@@ -13,14 +14,19 @@ import { Icon } from 'astro-icon'
             <span class='w-8 md:w-12 rounded-l-lg bg-slate-900 mr-2 md:mr-8 px-1 cool-shadow border-b-2 border-yellow-400'><Icon name="ri:arrow-left-s-fill" /></span>
             <span class='w-8 md:w-12 rounded-r-lg bg-slate-900 px-1 border-b-2 cool-shadow border-yellow-400'><Icon name="ri:arrow-right-s-fill" /></span>
         </div>
-        <div class="-rotate-24 px-8">
+        <div class="-rotate-45 px-8">
         <div id="buttons-row1" class="grid grid-cols-3">
-            <a href="/about"><div id="button-a" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2">A</div></a>
-            <a href="/"> <div id="button-b" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2">B</div></a>
-            <div id="button-c" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2">C</div>
+            <a href="/"><div id="button-a" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2 p-3">
+                <Icon name="ri:home-2-fill" /></div></a>
+            <a href="/about"> <div id="button-b" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2 p-3">
+                <Icon name="mdi:text" /></div></a>
+                <a href="/speaking"><div id="button-c" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2 p-3">
+                <Icon name="ion:mic" />
+            </div></a>
         </div>
         <div id="buttons-row2" class="flex justify-center">
-            <div id="button-d" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2">D</div>
+            <a href="/code"><div id="button-d" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2 p-3"> 
+                <Icon name="ri:code-s-slash-fill" /></div></a>
             <div id="button-e" class="controller-button border-b md:border-2 w-8 h-8 md:w-14 md:h-14 border-yellow-400 bg-slate-900 cool-shadow m-1 md:m-2">E</div>
         </div>
     </div>

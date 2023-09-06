@@ -1,11 +1,20 @@
 ---
 import { slide, fade } from 'astro:transitions';
+const {icon, title} = Astro.props;
+import { Icon } from 'astro-icon'
 ---
 <div
-  class="aspect-video w-full rounded-t-lg mt-2 md:mt-5 bg-black bg-opacity-50 shadow-lg text-yellow-400 font-inter font-semibold p-4 overflow-hidden"
-  
-  >
-<div transition:animate={slide({ duration: '0.7s' })} class="overflow-hidden">
-<slot  />
+  class="aspect-video w-full rounded-t-lg mt-2 md:mt-5 bg-black bg-opacity-50 shadow-lg text-yellow-400 font-inter p-4 overflow-hidden">
+<div class="flex">
+    <div class="flex w-full mx-2" > 
+        <div class="w-full">
+            <h2 class="mt-4 mb-2 font-bold uppercase text-2xl border-b-2 w-full">{title}</h2>  
+        <slot   />
+        </div>
+        <h2 class="h-8 w-8" transition:name="content-window-heading"> <Icon name={icon} /></h2>
+        
+</div>
+
+
 </div>
 </div>
