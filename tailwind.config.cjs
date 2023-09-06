@@ -15,6 +15,14 @@ module.exports = {
 				'10xl': '8rem',
 				'16xl': '14rem',
 			},
+			skew: {
+				'24': '24deg',
+				'-24': '-24deg',
+			},
+			rotate: {
+				'24': '24deg',
+				'-24': '-24deg',
+			},
 		},
 	},
 	plugins: [],

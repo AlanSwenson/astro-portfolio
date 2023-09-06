@@ -1,0 +1,10 @@
+---
+import { slide, fade } from 'astro:transitions';
+---
+<div
+  class="aspect-video w-full rounded-t-lg mt-2 md:mt-5 bg-black bg-opacity-50 shadow-lg text-yellow-400 font-inter font-semibold p-4 overflow-clip"
+  >
+<div transition:animate={slide({ duration: '0.7s' })} class="overflow-clip">
+<slot  />
+</div>
+</div>

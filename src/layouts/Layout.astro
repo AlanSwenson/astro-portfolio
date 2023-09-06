@@ -1,4 +1,8 @@
 ---
+
+import Controls from "../components/Controls.astro";
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
   title: string;
 }
@@ -15,12 +19,52 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
-    <slot />
+    <main class="py-10 px-4 flex justify-center m-auto flex-col">
+      <div class="m-auto w-auto relative">
+        <h1
+          class="text-violet-400 text-5xl sm:text-7xl md:text-8xl text-center uppercase leading-none"
+        >
+          Alan
+        </h1>
+        <h1
+          class="text-violet-400 text-5xl sm:text-7xl md:text-8xl text-center uppercase leading-none"
+        >
+          Swenson
+        </h1>
+        <span
+          class="leading-none
+            text-pink-500
+            transform
+            -skew-y-12
+            lg:ml-auto
+            wicked
+            text-4xl
+            sm:text-6xl
+            md:text-8xl
+            font-dafoe
+            lowercase
+            absolute
+            -right-5
+            sm:-right-10
+            md:-bottom-10
+            -bottom-3"
+        >
+          Portfolio</span
+        >
+      </div>
+    <div class="shadow-lg overflow-hidden">
+      <slot />
+      
+    <Controls />
+    </div>
+    </main>
   </body>
 </html>
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Monoton&family=Mr+Dafoe&display=swap");
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
@@ -47,5 +91,36 @@ const { title } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+  .font-dafoe {
+    font-family: "Mr Dafoe", cursive;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  main {
+    width: 800px;
+    max-width: calc(100% - 2rem);
+  }
+  h1 {
+    background-image: -webkit-linear-gradient(
+      #022486,
+      #0ad0fd 30%,
+      #bdfcfc 40%,
+      #d8ffff 44%,
+      #0c111c 0,
+      #0c111c 50%,
+      #074a67 52%,
+      #1cd8fe 60%,
+      #7fedfe 62%,
+      #96f5fc 70%,
+      #0fd8fa 73%,
+      #0bd2fd 88%,
+      #affdff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Monoton", cursive;
+    -webkit-text-stroke: 1px #fff;
   }
 </style>
